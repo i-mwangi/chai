@@ -175,7 +175,7 @@ All contracts and tokens are deployed on **Hedera Testnet**:
 
 **No installation required!** Visit the deployed application:
 
-👉 **https://chai-project-git-main-henrys-projects-d4d95c28.vercel.app/**
+👉 **(https://chai-platform-three.vercel.app/)**
 
 Features available in the live demo:
 - ✅ View 42 mapped coffee groves
@@ -198,8 +198,8 @@ Features available in the live demo:
 
 ```bash
 # Clone the repository
-git clone https://github.com/i-mwangi/chai-project.git
-cd chai-project
+git clone https://github.com/i-mwangi/chai.git
+cd chai
 
 # Install dependencies
 pnpm install
@@ -497,11 +497,6 @@ pnpm --version
 
 ---
 
-#### 💡 Still Having Issues?
-
-1. Check the [GitHub Issues](https://github.com/i-mwangi/chai-project/issues)
-2. Ensure you're using Node.js 18+ or 20+
-3. Try the mock API setup first: `pnpm run api:mock`
 
 ## 📁 Project Structure
 
@@ -1018,16 +1013,4 @@ Network: Hedera Testnet
 | Marketplace | `0.0.7116410` |
 | Platform USDC | `0.0.7144320` |
 
-### Check Account Balance
 
-```bash
-# Run the balance checker script
-node scripts/check-judge-account-balance.mjs
-```
-
-## 📞 Support
-
-For issues or questions:
-- Check existing [GitHub Issues](https://github.com/i-mwangi/chai-project/issues)
-- Contact the development team
-- Join the Hedera community on [Discord](https://hedera.com/discord)
