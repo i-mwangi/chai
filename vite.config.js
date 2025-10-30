@@ -24,7 +24,6 @@ export default defineConfig(({ mode }) => {
         input: {
           main: path.resolve(__dirname, 'frontend/index.html'),
           app: path.resolve(__dirname, 'frontend/app.html'),
-          walletTest: path.resolve(__dirname, 'frontend/wallet-test.html'),
           groveTracker: path.resolve(__dirname, 'frontend/grove-tracker.html'),
         },
         output: {
