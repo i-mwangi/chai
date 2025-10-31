@@ -144,3 +144,7 @@ scripts/verify-*.mjs
 # Temporary directories
 temp/
 tmp/
+
+# Documentation (deployment guides)
+docs
+RENDER_DEPLOYMENT.md

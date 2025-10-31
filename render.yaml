@@ -1,0 +1,31 @@
+services:
+  # Static Site - Frontend (Vite build)
+  - type: web
+    name: chai-platform-frontend
+    env: static
+    buildCommand: pnpm install && pnpm run frontend:build
+    staticPublishPath: ./frontend/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+
+  # Web Service - Mock API Server
+  - type: web
+    name: chai-platform-api
+    env: node
+    buildCommand: pnpm install
+    startCommand: node frontend/api-server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: API_PORT
+        value: 3005
+      - key: NODE_ENV
+        value: production
+    # Free tier - will sleep after 15 min inactivity
+    plan: free
+    healthCheckPath: /health
