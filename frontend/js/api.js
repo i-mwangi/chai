@@ -6,18 +6,24 @@
 export class CoffeeTreeAPI {
     constructor(baseURL) {
         if (!baseURL) {
-            // Check if we're on Vercel or production (use relative URLs)
-            const isProduction = window.location.hostname.includes('vercel.app') || 
-                                window.location.hostname.includes('chai-project');
-            
-            if (isProduction) {
-                // Use relative URLs on Vercel - API is on same domain
+            // Check for production API URL from environment variable
+            if (import.meta.env?.VITE_API_URL) {
+                // Use environment variable (for Render, Vercel, etc.)
+                this.baseURL = import.meta.env.VITE_API_URL;
+            } else if (window.location.hostname.includes('vercel.app') || 
+                       window.location.hostname.includes('chai-project')) {
+                // Vercel - use relative URLs (API on same domain)
                 this.baseURL = '';
+            } else if (window.location.hostname.includes('onrender.com')) {
+                // Render - construct API URL from frontend URL
+                // Replace 'frontend' with 'api' in the hostname
+                const apiHostname = window.location.hostname.replace('frontend', 'api');
+                this.baseURL = `https://${apiHostname}`;
             } else {
                 // Local development
                 const isDocker = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
                 const apiHost = isDocker ? 'api_mock' : 'localhost';
-                const apiPort = import.meta.env?.VITE_API_PORT || '3001';
+                const apiPort = import.meta.env?.VITE_API_PORT || '3005';
                 this.baseURL = `http://${apiHost}:${apiPort}`;
             }
         } else {

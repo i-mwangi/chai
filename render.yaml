@@ -12,6 +12,12 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 18
+      - key: VITE_API_URL
+        value: https://chai-platform-api.onrender.com
+      - key: VITE_WALLETCONNECT_PROJECT_ID
+        value: 39948bbdaaebec2790629f3e9589793a
+      - key: VITE_HEDERA_NETWORK
+        value: testnet
 
   # Web Service - Mock API Server
   - type: web
@@ -26,6 +32,11 @@ services:
         value: 3005
       - key: NODE_ENV
         value: production
+      # Turso database credentials
+      - key: TURSO_DATABASE_URL
+        value: libsql://chai-project-i-mwangi.aws-ap-south-1.turso.io
+      - key: TURSO_AUTH_TOKEN
+        value: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NjE5NTQzMjcsImlkIjoiMjU5MjFhM2YtZDYyYi00MTYxLWEwYTYtNmE5OTlkZjU4OTdhIiwicmlkIjoiZWU0ZmQxNTctZmY2Ny00ZWM2LThkOWItYzc4NWI5ODYxYjQ3In0.oQMe20wVDbwcWqH2P13M8LVF7WcLeHEDuJ8QaEIr8LpAVOMsblQqhrbWmCLqBmFfYjbkWbLeucMPFo-gH_lKCA
     # Free tier - will sleep after 15 min inactivity
     plan: free
     healthCheckPath: /health
