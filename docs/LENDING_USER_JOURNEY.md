@@ -529,15 +529,7 @@ APY increases dramatically:
 8. Viewable on HashScan
 9. Database records
 
-### ⚠️ Mock (Simulated)
-1. User USDC deposit (no actual transfer from you)
-2. Interest calculation (hardcoded 5%)
-3. APY changes (not based on real utilization)
-4. Borrowing (no real loans)
-5. Pool statistics (hardcoded values)
-6. Utilization rate (not real)
-
-### 🔮 Future (Not Implemented)
+### 🔮 Future 
 1. Real borrowing with collateral
 2. Time-based interest accrual
 3. Dynamic APY based on utilization
@@ -552,9 +544,5 @@ APY increases dramatically:
 1. **You get real LP tokens** in your HashPack wallet
 2. **You can burn them** to get USDC back (with mock interest)
 3. **All transactions** are on Hedera blockchain
-4. **Borrowing is mock** - no real loans yet
-5. **Interest is mock** - flat 5%, not time-based
-6. **It works** for testing and demonstration
-7. **Not production-ready** - needs real borrowing implementation
 
 This is a **functional prototype** with real blockchain integration for the liquidity provider side!
