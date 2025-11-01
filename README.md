@@ -175,7 +175,7 @@ All contracts and tokens are deployed on **Hedera Testnet**:
 
 **No installation required!** Visit the deployed application:
 
-👉 **(https://chai-platform-three.vercel.app/)**
+👉 **(https://chai-platform-frontend.onrender.com/)**
 
 Features available in the live demo:
 - ✅ View 42 mapped coffee groves
@@ -765,8 +765,7 @@ MARKETPLACE_CONTRACT_ID=0.0.zzzzz
 
 The platform is deployed on Vercel with serverless architecture:
 
-**Live Demo:** https://chai-project-git-main-henrys-projects-d4d95c28.vercel.app/
-
+**Live Demo:**(https://chai-platform-frontend.onrender.com/)
 ### Architecture
 
 - **Frontend:** Static files served from `frontend/dist/`
