@@ -19,12 +19,12 @@ services:
       - key: VITE_HEDERA_NETWORK
         value: testnet
 
-  # Web Service - API Server with Blockchain Integration
+  # Web Service - Mock API Server (Simple, No Build Required)
   - type: web
     name: chai-platform-api
     env: node
-    buildCommand: pnpm install && pnpm run build
-    startCommand: node dist/lib/api/server.js
+    buildCommand: pnpm install
+    startCommand: node frontend/api-server.js
     envVars:
       - key: NODE_VERSION
         value: 18
