@@ -220,8 +220,8 @@ const server = http.createServer(async (req, res) => {
             }
         }
 
-        // Health check
-        if (pathname === '/health' && method === 'GET') {
+        // Health check (support both /health and /api/health)
+        if ((pathname === '/health' || pathname === '/api/health') && method === 'GET') {
             sendResponse(res, 200, { 
                 success: true, 
                 message: 'Coffee Tree Platform API is running',
