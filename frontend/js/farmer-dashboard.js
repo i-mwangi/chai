@@ -344,7 +344,7 @@ class FarmerDashboard {
 
         // Add a marker when clicking on the map
         this.map.on('click', (e) => {
-            console.log('ðŸ“ Map clicked at', e.latlng);
+            console.log('📍 Map clicked at', e.latlng);
             this.handleMapClick(e);
         });
 
@@ -788,7 +788,7 @@ class FarmerDashboard {
                     </div>
                     ${grove.latitude && grove.longitude ? `
                     <div class="grove-coordinates">
-                        <small>ðŸ“ ${grove.latitude.toFixed(6)}, ${grove.longitude.toFixed(6)}</small>
+                        <small>📍 ${grove.latitude.toFixed(6)}, ${grove.longitude.toFixed(6)}</small>
                     </div>
                     ` : ''}
                 </div>
@@ -957,7 +957,7 @@ class FarmerDashboard {
                             <div class="detail-item full-width">
                                 <span class="detail-label">GPS Coordinates</span>
                                 <span class="detail-value mono-text">
-                                    ðŸ“ Lat: ${grove.latitude.toFixed(6)}, Long: ${grove.longitude.toFixed(6)}
+                                    📍 Lat: ${grove.latitude.toFixed(6)}, Long: ${grove.longitude.toFixed(6)}
                                 </span>
                             </div>
                             ` : ''}
