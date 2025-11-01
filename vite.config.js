@@ -28,18 +28,14 @@ export default defineConfig(({ mode }) => {
         },
         output: {
           format: 'es',
-          manualChunks: {
-            'hedera-wallet-vendor': ['@hashgraph/hedera-wallet-connect'],
-            'hashgraph-vendor': ['@hashgraph/sdk'],
-            'walletconnect-vendor': ['@walletconnect/sign-client', '@walletconnect/universal-provider'],
-          },
+          manualChunks: undefined, // Disable manual chunking to avoid circular dependency issues
           // Optimize chunk loading
           chunkFileNames: 'assets/[name]-[hash].js',
           entryFileNames: 'assets/[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash].[ext]',
         },
       },
-      // Enable compression
+      // Enable compression but keep it simple
       minify: 'terser',
       terserOptions: {
         compress: {
@@ -47,6 +43,7 @@ export default defineConfig(({ mode }) => {
           drop_debugger: true,
           pure_funcs: [], // Don't remove any functions
         },
+        mangle: false, // Disable name mangling to avoid issues
       },
     },
     server: {
@@ -79,6 +76,7 @@ export default defineConfig(({ mode }) => {
       esbuildOptions: {
         target: 'es2020',
       },
+      exclude: ['@hashgraph/sdk'], // Exclude from optimization to avoid circular deps
       force: true,
     },
     define: {

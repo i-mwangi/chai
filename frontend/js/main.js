@@ -362,6 +362,16 @@ class CoffeeTreeApp {
         });
     }
 
+    // Wait for API to be available
+    async waitForAPI() {
+        let attempts = 0;
+        while (!window.coffeeAPI && attempts < 50) {
+            await new Promise(resolve => setTimeout(resolve, 100));
+            attempts++;
+        }
+        return window.coffeeAPI;
+    }
+
     async testAPIConnection() {
         console.log('Testing API connection...');
 
