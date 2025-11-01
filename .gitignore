@@ -148,3 +148,4 @@ tmp/
 # Documentation (deployment guides)
 docs
 RENDER_DEPLOYMENT.md
+TROUBLESHOOTING.md
