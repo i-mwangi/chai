@@ -19,7 +19,7 @@ services:
       - key: VITE_HEDERA_NETWORK
         value: testnet
 
-  # Web Service - Real API Server with Blockchain Integration
+  # Web Service - API Server with Blockchain Integration
   - type: web
     name: chai-platform-api
     env: node

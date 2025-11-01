@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig((opts) => {
     return {
-        entry: ["./events/**/*.ts", "./providers/**/*.ts"],
+        entry: ["./events/**/*.ts", "./providers/**/*.ts", "./lib/api/server.ts"],
         splitting: false,
         sourcemap: true,
         dts: true,
