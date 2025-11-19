@@ -992,7 +992,7 @@ Network: Hedera Testnet
    - Or create your own testnet account at [portal.hedera.com](https://portal.hedera.com)
 
 3. **Visit Live Demo:**
-   - Go to https://chai-project-git-main-henrys-projects-d4d95c28.vercel.app/
+   - Go to [qawa-platform-frontend.onrender.com/](https://chai-platform-frontend.onrender.com/)
    - Click "Connect Wallet"
    - Select HashPack and approve connection
 
